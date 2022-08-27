@@ -24,8 +24,7 @@ public class RecipeServiceImp implements RecipeService {
     private final UserRepository userRepository;
 @Override
    public long save(Recipe recipe){
-       RecipeEntity recipeEntity = new RecipeEntity();
-       RecipeEntity.builder()
+       RecipeEntity recipeEntity = RecipeEntity.builder()
                .name(recipe.getName())
                .description(recipe.getDescription())
                .ingredients(recipe.getIngredients())
@@ -50,8 +49,7 @@ public class RecipeServiceImp implements RecipeService {
            return null;
        }
        RecipeEntity recipeEntity = recipeById.get();
-        Recipe recipe = new Recipe();
-        Recipe.builder()
+        Recipe recipe = Recipe.builder()
                 .name(recipeEntity.getName())
                 .description(recipeEntity.getDescription())
                 .ingredients(recipeEntity.getIngredients())
