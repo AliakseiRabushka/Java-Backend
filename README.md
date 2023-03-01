@@ -1,3 +1,3 @@
-# recipes
+# Java Backend
 
 MyFirstProject
